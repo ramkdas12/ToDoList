@@ -3,4 +3,6 @@ footer {
     position: absolute;
     width: 94%;
     height: 10%;
+    color: navajowhite;
+    border-top: 1px solid white;
 }
