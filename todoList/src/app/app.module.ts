@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { ListService } from './list.service';
+import { List } from './list.class';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ ListService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
