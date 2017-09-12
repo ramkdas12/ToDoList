@@ -9,6 +9,16 @@ import { List } from './../list.class';
     styleUrls: ['./section.component.css']
 })
 export class SectionComponent {
-    list: List[];
-    
+    //list: List[];
+    list: List[] = [{
+        id: 1,
+        title: 'Windstorm',
+        completed: false,
+        description: "Nothing"
+    },{
+        id: 2,
+        title: 'Dmart',
+        completed: true,
+        description: "Nothing"
+    }];
 }
