@@ -21,4 +21,18 @@ export class SectionComponent {
         completed: true,
         description: "Nothing"
     }];
+
+    openModal: false;
+
+    deleteList = function(index){
+        this.list.splice(index,1);
+    }
+
+    showModal = function(){
+        this.openModal = true;
+    }
+
+    closeModal = function(){
+        this.openModal = false;
+    }
 }

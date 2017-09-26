@@ -1,3 +1,17 @@
 section {
     width: 100%;
 }
+
+.add {
+    bottom: 0;
+    position: absolute;
+    bottom: 15%;
+    right: 4%;
+}
+
+.close {
+    z-index: 99999999;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

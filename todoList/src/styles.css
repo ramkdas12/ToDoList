@@ -10,3 +10,53 @@ body {
     padding: 2%;
     background-color: #f21c12;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.modalContent {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: black;
+    height: 60%;
+    top: 20%;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    padding: 3%;
+}
+
+.modalHeader {
+    border-bottom: 1px solid #666666;
+    height: 10%;
+}
+
+.modalBody {
+    border-bottom: 1px solid #666666;
+    height: 80%;
+}
+
+.modalFooter {
+    height: 10%;
+    padding-top: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}

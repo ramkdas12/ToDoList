@@ -2,19 +2,32 @@
     <div>
         <h2>Pending</h2>
         <div *ngFor='let item of list; let i = index'>
-            <div *ngIf='!item.completed'>
-                <input type='checkbox' class='form-control' [(ngModel)]='item.completed' name='{{item.title}}' />
+            <div *ngIf='!item.completed' class="form-group clear">
+                <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
+                <button class='right clear' (click)='deleteList(index)'>Del</button>
             </div>
         </div>
     </div>
     <div>
         <h2>Completed</h2>
         <div *ngFor='let item of list; let i = index'>
-            <div *ngIf='item.completed'>
-                <input type='checkbox' class='form-control' [(ngModel)]='item.completed' name='{{item.title}}' />
+            <div *ngIf='item.completed' class="form-group clear">
+                <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
+                <button class='right clear' (click)='deleteList(index)'>Del</button>
             </div>
         </div>
     </div>
+    <div class='container' [hidden]='!openModal'>
+        <div class='close right' (click)='closeModal()'>
+            close
+        </div>
+        <modal [list]='list' (openModal)='openModal' (openModalStatusChange)="closeModal($event)">
+
+        </modal>
+    </div>
+    <button class='add' (click)='showModal()'>
+        add
+    </button>
 </section>
