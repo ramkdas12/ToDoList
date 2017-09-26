@@ -5,7 +5,7 @@
             <div *ngIf='!item.completed' class="form-group clear">
                 <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
-                <button class='right clear' (click)='deleteList(index)'>Del</button>
+                <button class='right clear' (click)='deleteList(i)'>Del</button>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             <div *ngIf='item.completed' class="form-group clear">
                 <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
-                <button class='right clear' (click)='deleteList(index)'>Del</button>
+                <button class='right clear' (click)='deleteList(i)'>Del</button>
             </div>
         </div>
     </div>
