@@ -22,7 +22,9 @@ export class ModalComponent implements OnInit {
     updateList = function(){
         this.item.id = this.list.length;
         this.item.completed = false;
-        this.list.push(this.item);
+        var test = this.item;
+        this.list.push(test);
+        this.item = {};
         this.openModal = false;
         this.openModalStatusChange.emit(this.openModal);
     }
