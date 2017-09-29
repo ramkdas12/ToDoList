@@ -5,7 +5,7 @@
             <div *ngIf='!item.completed' class="form-group clear">
                 <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
-                <button class='right clear' (click)='deleteList(i)'>Del</button>
+                <div class='delete right clear' (click)='deleteList(i)'></div>
             </div>
         </div>
     </div>
@@ -15,19 +15,17 @@
             <div *ngIf='item.completed' class="form-group clear">
                 <input type='checkbox' class='' [(ngModel)]='item.completed' name='{{item.title}}' />
                 <span>{{item.title}}</span>
-                <button class='right clear' (click)='deleteList(i)'>Del</button>
+                <div class='delete right clear' (click)='deleteList(i)'></div>
             </div>
         </div>
     </div>
     <div class='container' [hidden]='!openModal'>
         <div class='close right' (click)='closeModal()'>
-            close
         </div>
         <modal [list]='list' (openModal)='openModal' (openModalStatusChange)="closeModal($event)">
 
         </modal>
     </div>
-    <button class='add' (click)='showModal()'>
-        add
-    </button>
+    <div class='add' (click)='showModal()'>
+    </div>
 </section>
