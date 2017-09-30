@@ -60,3 +60,16 @@ h5 {
 .clear {
     clear: both;
 }
+
+.inlineBlock{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.width3Per{
+    width: 3%;
+}
+
+.width80Per{
+    width: 80%;
+}
