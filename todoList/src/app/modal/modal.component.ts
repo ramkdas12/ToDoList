@@ -13,13 +13,13 @@ export class ModalComponent implements OnInit {
     @Input() openModal: Boolean;
     @Output() openModalStatusChange = new EventEmitter<Boolean>();
 
-    item =  new List();
+    item = new List();
 
     ngOnInit(): void {
-        
+
     }
-    
-    updateList = function(){
+
+    updateList = function () {
         this.item.id = this.list.length;
         this.item.completed = false;
         var test = this.item;
