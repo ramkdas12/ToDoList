@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { ListService } from './../list.service';
 import { List } from './../list.class';
 
+import { AccordionComponent } from './../accordion/accordion.component';
+
 @Component({
     selector: 'app-section',
     templateUrl: './section.component.html',

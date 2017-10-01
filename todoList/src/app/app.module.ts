@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ModalComponent } from './modal/modal.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +19,8 @@ import { List } from './list.class';
     HeaderComponent,
     SectionComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
