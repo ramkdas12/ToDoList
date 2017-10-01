@@ -1,34 +1,40 @@
 <section>
-    <div>
-        <h2>Pending</h2>
-        <div *ngFor='let item of list; let i = index'>
-            <div *ngIf='!item.completed' class="form-group clear">
-                <div class='inlineBlock width3Per'>
-                    <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
+    <accordion>
+        <div>
+            <h2 class='itemHeader'>Pending</h2>
+            <div class='itemBody'>
+                <div *ngFor='let item of list; let i = index'>
+                    <div *ngIf='!item.completed' class="form-group clear">
+                        <div class='inlineBlock width3Per'>
+                            <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
+                        </div>
+                        <div class='width80Per inlineBlock title'>
+                            <label for='{{item.id}}'>{{item.title}}</label>
+                        </div>
+                        <div class='delete right inlineBlock width3Per' (click)='deleteList(i)'></div>
+                    </div>
+                    <div class='clear'></div>
                 </div>
-                <div class='width80Per inlineBlock title'>
-                    <label for='{{item.id}}'>{{item.title}}</label>
-                </div>
-                <div class='delete right inlineBlock width3Per' (click)='deleteList(i)'></div>
             </div>
-            <div class='clear'></div>
         </div>
-    </div>
-    <div>
-        <h2>Completed</h2>
-        <div *ngFor='let item of list; let i = index'>
-            <div *ngIf='item.completed' class="form-group clear">
-                <div class='inlineBlock width3Per'>
-                    <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
+        <div>
+            <h2 class='itemHeader'>Completed</h2>
+            <div class='itemBody'>
+                <div *ngFor='let item of list; let i = index'>
+                    <div *ngIf='item.completed' class="form-group clear">
+                        <div class='inlineBlock width3Per'>
+                            <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
+                        </div>
+                        <div class='width80Per inlineBlock title'>
+                            <label for='{{item.id}}'>{{item.title}}</label>
+                        </div>
+                        <div class='delete right inlineBlock width3Per' (click)='deleteList(i)'></div>
+                    </div>
+                    <div class='clear'></div>
                 </div>
-                <div class='width80Per inlineBlock title'>
-                    <label for='{{item.id}}'>{{item.title}}</label>
-                </div>
-                <div class='delete right inlineBlock width3Per' (click)='deleteList(i)'></div>
             </div>
-            <div class='clear'></div>
         </div>
-    </div>
+    </accordion>
     <div class='container' [hidden]='!openModal'>
         <div class='close right' (click)='closeModal()'>
         </div>
