@@ -1,10 +1,10 @@
 <section>
     <accordion>
-        <div>
+        <div class='pending'>
             <h2 class='itemHeader'>Pending</h2>
             <div class='itemBody'>
                 <div *ngFor='let item of list; let i = index'>
-                    <div *ngIf='!item.completed' class="form-group clear">
+                    <div *ngIf='!item.completed' class="form-group clear" [ngClass]='{"shown" : !item.completed}'>
                         <div class='inlineBlock width3Per'>
                             <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
                         </div>
@@ -17,11 +17,11 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class='completed'>
             <h2 class='itemHeader'>Completed</h2>
             <div class='itemBody'>
                 <div *ngFor='let item of list; let i = index'>
-                    <div *ngIf='item.completed' class="form-group clear">
+                    <div *ngIf='item.completed' class="form-group clear"  [ngClass]='{"shown" : item.completed}'>
                         <div class='inlineBlock width3Per'>
                             <input type='checkbox' id='{{item.id}}' class='checkbox form-control' [(ngModel)]='item.completed' name='{{item.title}}'>
                         </div>

@@ -61,15 +61,54 @@ h5 {
     clear: both;
 }
 
-.inlineBlock{
+.inlineBlock {
     display: inline-block;
     vertical-align: middle;
 }
 
-.width3Per{
+.width3Per {
     width: 3%;
 }
 
-.width80Per{
+.width80Per {
     width: 80%;
+}
+
+.itemHeader {
+    background-color: white;
+    border: 1px solid #333333;
+}
+
+@keyframes collapse {
+    from {height: auto;}
+    to {height: 0;}
+}
+
+@keyframes expand {
+    from {height: 0;}
+    to {height: auto;}
+}
+.collapsed {
+    /* animation-name: collapse;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in; */
+    /* transform: scale(0); */
+    transition: height 0.5s ease-in;
+    background: yellow;
+    overflow: hidden;
+    height: 0;
+}
+
+.expanded {
+    /* animation-name: expand;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out; */
+    /* transform: scale(1); */
+    transition: height 0.5s ease-out;
+    background: cyan;
+    overflow: hidden;
+}
+
+.shown {
+    margin-bottom: 0px;
 }
